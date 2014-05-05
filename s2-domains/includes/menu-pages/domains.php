@@ -141,7 +141,7 @@ namespace s2member_domains
 								}
 							if(!empty($_r[__NAMESPACE__.'_added_domain']))
 								{
-									$_domain     = (string)$_r[__NAMESPACE__.'_added_domain'];
+									$_domain     = strtolower((string)$_r[__NAMESPACE__.'_added_domain']);
 									$_level      = $this->plugin->level_for($_domain);
 									$_action_url = add_query_arg(urlencode_deep(array('page'        => __NAMESPACE__.'_domains',
 									                                                  __NAMESPACE__ => array('update_users_with_domain' => array('domain' => $_domain)))), self_admin_url('/admin.php'));
