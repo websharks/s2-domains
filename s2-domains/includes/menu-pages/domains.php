@@ -73,7 +73,7 @@ namespace s2member_domains
 
 							echo '   </form>'."\n";
 						}
-					else if(!empty($_r['update_domain']) && ($_domain = strtolower($this->plugin->get_domain($_r['update_domain']))))
+					else if(!empty($_r['update_domain']) && ($_domain = $this->plugin->get_domain(strtolower($_r['update_domain']))))
 						{
 							echo '   <h2>'.__('Update this Domain', $this->plugin->text_domain).'</h2>'."\n";
 
