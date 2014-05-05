@@ -84,7 +84,7 @@ namespace s2member_domains
 					$email   = (string)$vars['email'];
 
 					if(($level = $this->level_for($email)))
-						if(($user = new \WP_User($user_id)) && $user->exists() && !$user->has_cap('access_s2member_level'.$level) && !$user->has_cap($this->cap))
+						if(($user = new \WP_User($user_id)) && $user->exists())
 							$user->set_role('s2member_level'.$level);
 				}
 
@@ -141,7 +141,6 @@ namespace s2member_domains
 					foreach($this->user_ids_with_domain($domain) as $_user_id)
 						{
 							$_user = new \WP_User($_user_id);
-							if(!$_user->has_cap($this->cap) && !$_user->has_cap('access_s2member_level'.$level))
 							$_user->set_role('s2member_level'.$level_for_domain);
 							$total_role_changes++; // Increment counter.
 						}
