@@ -11,6 +11,6 @@ Description: Registration access control based email@domain.
 if(!defined('WPINC')) // MUST have WordPress.
 	exit('Do NOT access this file directly: '.basename(__FILE__));
 
-if(require(dirname(__FILE__) . '/wp-php53.php'))
+if(require(dirname(__FILE__).'/wp-php53.php'))
 	require_once dirname(__FILE__).'/s2-domains.inc.php';
 else wp_php53_notice('s2 Domains');
