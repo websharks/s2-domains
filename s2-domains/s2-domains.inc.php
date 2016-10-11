@@ -193,7 +193,7 @@ namespace s2member_domains
 			$this->wpdb()->query('CREATE TABLE IF NOT EXISTS `'.esc_sql($this->db_table('domains')).'`'.
 			                     '('.
 			                     '   `ID` bigint(20) NOT NULL AUTO_INCREMENT,'.
-			                     '   `domain` varchar(255) COLLATE '.esc_sql($collate).' NOT NULL,'.
+			                     '   `domain` varchar(128) COLLATE '.esc_sql($collate).' NOT NULL,'.
 			                     '   `level` int(11) NOT NULL,'.
 			                     '   `notes` text COLLATE '.esc_sql($collate).' NOT NULL,'.
 			                     '   PRIMARY KEY (`ID`), UNIQUE KEY `domain` (`domain`)'.
