@@ -111,7 +111,7 @@ namespace s2member_domains
 				return array(); // Not possible.
 
 			$query = "SELECT `ID` FROM `".esc_sql($this->wpdb()->users)."`".
-			         " WHERE `user_email` LIKE '".esc_sql('%@'.like_escape($domain))."'";
+			         " WHERE `user_email` LIKE '".esc_sql('%@'.$this->wpdb()->esc_like($domain))."'";
 
 			return $this->wpdb()->get_col($query);
 		}
@@ -122,7 +122,7 @@ namespace s2member_domains
 				return 0; // Not possible.
 
 			$query = "SELECT `ID` FROM `".esc_sql($this->wpdb()->users)."`".
-			         " WHERE `user_email` LIKE '".esc_sql('%@'.like_escape($domain))."' LIMIT 1";
+			         " WHERE `user_email` LIKE '".esc_sql('%@'.$this->wpdb()->esc_like($domain))."' LIMIT 1";
 
 			return $this->calc_found_rows($query);
 		}
