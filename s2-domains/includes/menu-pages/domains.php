@@ -36,7 +36,7 @@ namespace s2member_domains
 				echo '               </th>'."\n";
 				echo '               <td>'."\n";
 				echo '                  <input type="text" id="'.esc_attr(__NAMESPACE__.'_add_domain_domain').'" name="'.esc_attr(__NAMESPACE__.'[add_domain][domain]').'" value="" class="regular-text" autocomplete="off" />'."\n";
-				echo '                  <p class="description">'.__('e.g. user@<code>domain</code>, please enter a <code>domain</code> name only', $this->plugin->text_domain).'</p>'."\n";
+				echo '                  <p class="description">'.__('Please enter a domain name only; e.g., <code>example.com</code>', $this->plugin->text_domain).'</p>'."\n";
 				echo '               </td>'."\n";
 				echo '            </tr>'."\n";
 
