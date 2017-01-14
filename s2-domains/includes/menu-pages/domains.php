@@ -2,7 +2,7 @@
 namespace s2member_domains
 {
 	if(!defined('WPINC')) // MUST have WordPress.
-		exit('Do NOT access this file directly: '.basename(__FILE__));
+		exit('Do NOT access this file directly.');
 
 	class menu_page_domains
 	{

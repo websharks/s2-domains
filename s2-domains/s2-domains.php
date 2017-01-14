@@ -8,8 +8,8 @@ Author URI: http://www.websharks-inc.com
 Author: WebSharks, Inc.
 Description: Registration access control based email@domain.
 */
-if(!defined('WPINC')) // MUST have WordPress.
-	exit('Do NOT access this file directly: '.basename(__FILE__));
+if(!defined('WPINC'))
+	exit('Do NOT access this file directly.');
 
 if(require(dirname(__FILE__).'/wp-php53.php'))
 	require_once dirname(__FILE__).'/s2-domains.inc.php';
